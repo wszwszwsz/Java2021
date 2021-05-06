@@ -1,0 +1,33 @@
+my:
+  custom:
+    property: Hello From default
+
+---
+spring:
+  config:
+    activate:
+      on-profile: jaz
+my:
+  custom:
+    property: Hello From JAZ
+    random: Some random value
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+my:
+  custom:
+    boolProperty: false
+    property: Hello from DEV
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+my:
+  custom:
+    boolProperty: true
+    property: Hello from DEV
